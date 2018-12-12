@@ -11,7 +11,7 @@
 
     <modules>
         <module>hello-spring-boot</module>
-        <module>Spring-Integration-hello-world</module>
+        <module>spring-integration-hello-world</module>
         <module>spring-integration-setup</module>
 
         <module>user-service</module>

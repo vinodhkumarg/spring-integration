@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test</groupId>
-	<artifactId>Spring-Integration-hello-world</artifactId>
+	<artifactId>spring-integration-hello-world</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Spring-Integration-hello-world</name>
 	<description>Demo project for Spring-Integration-hello-world</description>
