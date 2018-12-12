@@ -9,6 +9,7 @@
     <version>1.0.0-Release</version>
 
     <modules>
+        <module>hello-spring-boot</module>
         <module>user-service</module>
     </modules>
 
