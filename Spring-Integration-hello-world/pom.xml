@@ -11,7 +11,7 @@
 	<groupId>com.test</groupId>
 	<artifactId>spring-integration-hello-world</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring-Integration-hello-world</name>
+	<name>spring-integration-hello-world</name>
 	<description>Demo project for Spring-Integration-hello-world</description>
 
 	<properties>
