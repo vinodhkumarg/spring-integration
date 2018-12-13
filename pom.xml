@@ -13,7 +13,7 @@
         <module>hello-spring-boot</module>
         <module>spring-integration-hello-world</module>
         <module>spring-integration-setup</module>
-
+        <module>spring-integration-message</module>
         <module>user-service</module>
     </modules>
 
