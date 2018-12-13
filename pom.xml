@@ -14,6 +14,8 @@
         <module>spring-integration-hello-world</module>
         <module>spring-integration-setup</module>
         <module>spring-integration-message</module>
+        <module>spring-integration-channel</module>
+
         <module>user-service</module>
     </modules>
 
