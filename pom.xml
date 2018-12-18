@@ -16,6 +16,7 @@
         <module>spring-integration-message</module>
         <module>spring-integration-channel</module>
         <module>spring-integration-endpoint</module>
+        <module>spring-integration-message-template</module>
         <module>user-service</module>
     </modules>
 
