@@ -17,6 +17,8 @@
         <module>spring-integration-channel</module>
         <module>spring-integration-endpoint</module>
         <module>spring-integration-message-template</module>
+        <!--day 3-->
+        <module>spring-integration-queue-channel</module>
         <module>user-service</module>
     </modules>
 
