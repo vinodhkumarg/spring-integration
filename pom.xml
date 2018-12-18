@@ -20,6 +20,9 @@
         <!--day 3-->
         <module>spring-integration-queue-channel</module>
         <module>spring-integration-priority-channel</module>
+        <module>spring-integration-direct-channel</module>
+
+
         <module>user-service</module>
     </modules>
 
