@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.3.xsd">
+
+	<!-- #1 configure a gateway with a default request channel -->
+	<int:gateway service-interface="com.test.spring.gateway.PrintGateway"
+		default-request-channel="inputChannel" />
+
+	<!--Default direct channel  -->
+	<int:channel id="inputChannel">
+		<int:dispatcher load-balancer="round-robin" failover="false"/>
+	</int:channel>
+
+	
+	<bean id="printService" class="com.test.spring.service.PrintService" />
+	<!--configure upper case print service bean  -->
+	<bean id="upperCasePrintService" class="com.test.spring.service.UpperCasePrintService"></bean>
+	
+	<int:service-activator ref="upperCasePrintService" method="print" input-channel="inputChannel" order="2"/>
+	 
+	<int:service-activator ref="printService" method="print" input-channel="inputChannel"  order="1"/>
+		
+	
+</beans>

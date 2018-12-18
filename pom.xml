@@ -21,7 +21,7 @@
         <module>spring-integration-queue-channel</module>
         <module>spring-integration-priority-channel</module>
         <module>spring-integration-direct-channel</module>
-
+        <module>spring-integration-publish-subscribe</module>
 
         <module>user-service</module>
     </modules>
