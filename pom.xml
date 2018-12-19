@@ -23,6 +23,10 @@
         <module>spring-integration-direct-channel</module>
         <module>spring-integration-publish-subscribe</module>
         <module>spring-integration-message-bridge</module>
+        <module>spring-integration-channel-interceptor</module>
+
+        <!--day 4-->
+        <module>spring-integration-message-type-router</module>
 
         <module>user-service</module>
     </modules>
