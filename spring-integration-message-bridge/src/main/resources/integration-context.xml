@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.3.xsd">
+
+	<!-- #1 configure a gateway with a default request channel -->
+	<int:gateway service-interface="com.test.spring.gateway.PrintGateway"
+		default-request-channel="pollableChannel" />
+
+	<int:channel id="pollableChannel">
+		<int:queue capacity="10" />
+	</int:channel>
+
+	<int:bridge input-channel="pollableChannel" output-channel="inputChannel">
+		<int:poller fixed-delay="5" time-unit="SECONDS"
+			max-messages-per-poll="2"></int:poller>
+	</int:bridge>
+
+	<bean id="printService" class="com.test.spring.service.PrintService" />
+	<!--configure upper case print service bean -->
+	<bean id="upperCasePrintService" class="com.test.spring.service.UpperCasePrintService"></bean>
+
+	<int:service-activator ref="upperCasePrintService"
+		method="print" input-channel="inputChannel" order="2" />
+
+	<int:service-activator ref="printService" method="print"
+		input-channel="inputChannel" order="1" />
+
+
+</beans>

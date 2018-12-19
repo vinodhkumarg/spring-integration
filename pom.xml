@@ -22,6 +22,7 @@
         <module>spring-integration-priority-channel</module>
         <module>spring-integration-direct-channel</module>
         <module>spring-integration-publish-subscribe</module>
+        <module>spring-integration-message-bridge</module>
 
         <module>user-service</module>
     </modules>
