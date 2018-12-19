@@ -28,6 +28,8 @@
         <!--day 4-->
         <module>spring-integration-message-type-router</module>
         <module>spring-integration-header-value-router</module>
+        <module>spring-integration-recipient-list-router</module>
+
         <module>user-service</module>
     </modules>
 
